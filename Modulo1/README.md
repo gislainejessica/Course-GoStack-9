@@ -102,4 +102,4 @@ index.js é um arquivo que contém as rotas que estarão expostas na api, então
   - breakpoint
   - multiplos breakpoints
   - launch file
-  -  observando variavel no debug
+  - observando variavel no debug
