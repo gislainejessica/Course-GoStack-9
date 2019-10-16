@@ -77,11 +77,29 @@ Comandos pra iniciar o projeto NodeJs do zero:
 
 1) CRUD
 
+index.js é um arquivo que contém as rotas que estarão expostas na api, então dentro desse arquivo nos teremos o CRUD implimentado.
+
 | Create | Read | Update | Delete
 | ------ | ---- | ------ | ------
 | Post   | Get  |  Put   |  Delete
+| server.post() | server.get() | server.put() | server.delete()
 
 ---
 
 2) MidlleWares
+  
+  São formas de manipular as informação que estão na requisição e retornar ou não respostas para o usuário
 
+  - Global
+
+  `server.use('Algum middleware aqui dentro (req, res, next)=>{}')`
+
+  - Local
+  
+  `server.get('user', middlewere(req, res)=>{})`
+
+- Debugar usando debug do vscode
+  - breakpoint
+  - multiplos breakpoints
+  - launch file
+  -  observando variavel no debug
