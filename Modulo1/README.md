@@ -29,6 +29,59 @@ NodeJs é uma **Plataforma** para desenvolvimento em back-end e não uma linguag
   - **Single Thread** (C++ por baixo dos panos faz multi)
   - **Non block io** (Não bloqueia entrada e saida, recebe o pedido e quando recebe a resposta manda de volta, mas não fica segurando recurso nesse meio tempo)
 - Exemplos de *Frameworks* usado no NodeJs
-  - Express
-  - AdonisJs
-  - NestJs
+  - [Express](https://expressjs.com/pt-br/)
+  - [AdonisJs](https://adonisjs.com)
+  - [NestJs](https://nestjs.com)
+
+- Outras bibliotecas / frameworks / ferramentas
+  - [Nodemon](https://www.npmjs.com/package/nodemon)
+
+- Softwares de Apoio
+  - [Insomia](https://insomnia.rest) para testar as rotas criadas
+
+---
+Comandos pra iniciar o projeto NodeJs do zero:
+
+- Criar uma pasta 
+
+  `mkdir modulo-1`
+- Iniciar um projeto vazio em NodeJs
+
+  `yarn init`
+- Adicionar dependências ao projeto
+  
+  `yarn add express`
+
+  Express vai ser usado principalmente para criação e manipulação das rotas do backend.
+
+  `yarn add nodemon -D`
+
+  Nodemon aqui é mais pra não ter o trabalho de ter que ficar reiniciando o servidor a cada mudança. 
+    - Criar um script, no *package.json* para executar nodemon
+    ```js
+    "scripts": {
+      "dev":"nodemon index.js"  
+    },
+    ```
+
+`touch index.js`
+
+---
+- Como a informação é tranmitida numa Api Rest
+
+| Query Params | Route Params  | Request Body
+|------------- | --------------|-------------
+|**?** nome=**query**|users/**1**|**{**"name":"Jessica"**}**
+
+---
+
+1) CRUD
+
+| Create | Read | Update | Delete
+| ------ | ---- | ------ | ------
+| Post   | Get  |  Put   |  Delete
+
+---
+
+2) MidlleWares
+
