@@ -23,6 +23,8 @@ Ver videos | Codar | Documentar
 :heavy_check_mark:| :clock10:|:clock10:
 
 ## INTRO: Configurações e conceitos iniciais
+[Start do Projeto](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/iniciar.md)
+
 [Sucrase Nodemon](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/sucrase-nodemon.md)
 
 [Docker](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/docker.md)
