@@ -45,14 +45,24 @@ Ver videos | Codar | Documentar
   `yarn sucrase-node src/server.js` ou 
   
   criar um script no package.json: 
+  
   `"scripts": {"dev":"nodemon src/server.js"}` 
+  
   add o arquivo *nodemon.json* na raiz do projeto, com os seguinte conteúdo:
+  
   `{"execMap": {"js": "node -r sucrase/register"}}`
+  
   O sucrase vai afetar um pouco o processo de debugger:
-  - Add mais um script `"dev:debug": "nodemon --inspect src/server.js"`
-  - Rodar `yarn dev:debug`
+  - Add mais um script:
+  
+    `"dev:debug": "nodemon --inspect src/server.js"`
+  - Rodar 
+  
+    `yarn dev:debug`
   - Escolher a opção de debug do VScode:
-    - Add no *launch.json*: ``
+    - Add no *launch.json*: 
+    
+      `"restart":true, "request": "attach"`
 
   Basicamente é uma questão de gosto, na hora de codar. 
 
