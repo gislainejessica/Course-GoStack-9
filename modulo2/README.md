@@ -69,3 +69,46 @@ Ver videos | Codar | Documentar
   - O *nodemon* pra rodar o servidor sem precisa reiniciar a cada mudança de arquivo
 
 ---
+
+## Docker
+**Definicão**
+
+Basicamente usamos o [Docker](https://www.docker.com): 
+- Para a criação de ambientes isolados (container) que expõe portas para comunicação
+
+**Conceitos** 
+- *Imagem* é um serviço do Docker onde ferramentas, tecnolofias, são disponibilizadospara serem usadas.
+
+- *Container* é uma instância da imagem.
+
+- *Docker Registry* (Docker Hub)
+
+  É onde fica todas as imagens do Docker, inclusive podemos criar e disponibilizar fora da nossa máquina uma imagem que criamos de uma aplicação.
+
+- *Dockerfile* - É usado para montar uma imagem: 
+
+  Podemos criar a nossa própria imagem de aplicação  em nodejs, por exemplo.
+  - Resumindo o *Dockerfile* contem como se fosse a **Receita de uma imagem**;
+
+### Exemplo de Docker File (Receita pra app NodeJs)
+**Partimos de uma imagem existente**
+
+`FROM node:10`
+
+**Definimos a pasta e copiamos o arquivos**
+
+`WORKDIR /usr/app`
+`COPY . ./`
+
+**Instalamos as dependências**
+
+`RUN yarn`
+
+**Qual porta queremos expor?**
+
+`EXPOSE 3333`
+
+**Executamos nossa aplicação**
+
+`CMD yarn start`
+
