@@ -1,8 +1,12 @@
 # Course-GoStack-9
 
+<h1 align="center">
+    <img alt="GoStack" src="Gostack.png" width="240px" />
+</h1>
+
 Atividades desenvolvidas durante curso da Rockeseat GoStack 9
 
- > Keep coding, just stop to drink more coffee. 
+ > Keep coding, stop to drink coffee :coffee:, the back to coding.  
 
 Mas se quiser decolar de vez, tem que seguir a lista de tarefas:
 
