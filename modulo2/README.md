@@ -25,9 +25,9 @@ Ver videos | Codar | Documentar
 ## INTRO: Configurações e conceitos iniciais
 [Sucrase Nodemon](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/sucrase-nodemon.md)
 
-[Docker](../docs/docker.md)
+[Docker](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/docker.md)
 
-[Sequelize](~/docs/sequelize.md)
+[Sequelize](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/sequelize.md)
 
 ### Ferramentas
 - [PostBird](https://snapcraft.io/postbird)
