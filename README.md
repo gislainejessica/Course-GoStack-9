@@ -1,5 +1,6 @@
-# Course-GoStack-9
-
+<h1 align=center>
+   Course-GoStack-9
+</h1>
 <h1 align="center">
     <img alt="GoStack" src="Gostack.png" width="240px" />
 </h1>
