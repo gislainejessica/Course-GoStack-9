@@ -23,11 +23,11 @@ Ver videos | Codar | Documentar
 :heavy_check_mark:| :clock10:|:clock10:
 
 ## INTRO: Configurações e conceitos iniciais
-[Sucrase Nodemon]('./docs/sucrase-nodemon.md')
+[Sucrase Nodemon]('https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/sucrase-nodemon.md')
 
-[Docker]('./docs/docker.md')
+[Docker]('../docs/docker.md')
 
-[Sequelize]('./docs/sequelize.md')
+[Sequelize]('~/docs/sequelize.md')
 
 ### Ferramentas
 - [PostBird](https://snapcraft.io/postbird)
