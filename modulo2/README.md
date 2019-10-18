@@ -23,11 +23,13 @@ Ver videos | Codar | Documentar
 :heavy_check_mark:| :clock10:|:clock10:
 
 ## INTRO: Configurações e conceitos iniciais
-[Sucrase Nodemon]('./docs/sucrase-nodemon.md')
+[Start do Projeto](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/iniciar.md)
 
-[Docker]('./docs/docker.md')
+[Sucrase Nodemon](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/sucrase-nodemon.md)
 
-[Sequelize]('./docs/sequelize.md')
+[Docker](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/docker.md)
+
+[Sequelize](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/sequelize.md)
 
 [Sequelize]('')
 
