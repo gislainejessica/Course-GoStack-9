@@ -33,7 +33,7 @@ Ver videos | Codar | Documentar
 
 [Código estilo e correção](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/config-code.md)
 
-[Migrations](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/migrations)
+[Migrations](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/migrations.md)
 
 ### Ferramentas
 - [PostBird](https://snapcraft.io/postbird)
