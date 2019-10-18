@@ -1,10 +1,10 @@
-// Configuração confidencial para acessar ao banco de dados
 module.exports = {
   dialect: 'postgres',
   host: 'localhost',
+  port: 5532,
   username: 'postgres',
-  password: 'jessica',
-  database: 'sql-banco',
+  password: '1234',
+  database: 'dbteste',
   define: {
     timestamps: true,
     underscored: true,
