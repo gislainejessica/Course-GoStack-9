@@ -2,7 +2,7 @@
 - [x] Nodemon & Sucrase                 
 - [x] Conceitos do Docker                
 - [x] Configurando Docker                 
-- [ ] Sequelize & MVC                   
+- [x] Sequelize & MVC                   
 - [ ] ESLint, Prettier & EditorConfig   
 - [ ] Configurando Sequelize            
 - [ ] Migration de usuário              
@@ -28,6 +28,8 @@ Ver videos | Codar | Documentar
 [Docker]('./docs/docker.md')
 
 [Sequelize]('./docs/sequelize.md')
+
+[Sequelize]('')
 
 ### Ferramentas
 - [PostBird](https://snapcraft.io/postbird)
