@@ -14,3 +14,12 @@ No modelo MVC as tabelas representa o Model
 - Seeds: popula a base de dados com dados fakes, dados pra testes (DEV)
   - Gerado por código
   - NUNCA em Produção, na produção dados só podem ser criados na migrations.
+
+- Model: Representação do modelo: geralmente representa o banco de dados
+- View: Retorno ao cliente
+- Controller: Regras de negocio => 
+  - De preferência uma classe
+  - Não chama outro controller ou metodo (Tem que ser auto suficiente), 
+  - Retorna json, 
+  - No maximo 5 metodos (index, show, store, update, delete) 
+  
