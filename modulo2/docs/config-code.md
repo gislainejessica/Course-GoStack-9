@@ -70,3 +70,25 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 ```
+
+## sequelize
+`yarn add sequelize`
+`yarn add sequelize-cli -D`
+- Criar na raiz um arquivo `.sequelizerc` add:
+  ```js
+  const { resolve } = require('path')
+
+  module.exports ={
+  config : resolve(__dirname, 'src','config', 'database.js'),
+  'models-path' : resolve(__dirname, 'src','app', 'models'),
+  'migrations-path' : resolve(__dirname, 'src','database', 'migrations'),
+  'seeds-path' : resolve(__dirname, 'src','database', 'seeds')
+  }
+  ```
+
+- No modo de require fazer as configurações de importações
+  - `yarn add pg pg-hstore`
+
+- E no arquivo **databe.js**
+`module.exports = { dialect: 'postgres'}`
+

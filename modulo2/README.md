@@ -1,22 +1,22 @@
-- [x] Configurando estrutura            
-- [x] Nodemon & Sucrase                 
-- [x] Conceitos do Docker                
-- [x] Configurando Docker                 
-- [x] Sequelize & MVC                   
-- [ ] ESLint, Prettier & EditorConfig   
-- [ ] Configurando Sequelize            
-- [ ] Migration de usuário              
-- [ ] Model de usuário                 
-- [ ] Criando loader de models         
-- [ ] Cadastro de usuários             
-- [ ] Gerando hash da senha            
-- [ ] Conceitos de JWT                 
-- [ ] Autenticação JWT                 
-- [ ] Middleware de autenticação       
-- [ ] Update do usuário                
-- [ ] Validando dados de entrada       
+- [x] Configurando estrutura
+- [x] Nodemon & Sucrase
+- [x] Conceitos do Docker
+- [x] Configurando Docker
+- [x] Sequelize & MVC
+- [X] ESLint, Prettier & EditorConfig
+- [x] Configurando Sequelize
+- [ ] Migration de usuário
+- [ ] Model de usuário
+- [ ] Criando loader de models
+- [ ] Cadastro de usuários
+- [ ] Gerando hash da senha
+- [ ] Conceitos de JWT
+- [ ] Autenticação JWT
+- [ ] Middleware de autenticação
+- [ ] Update do usuário
+- [ ] Validando dados de entrada
 
-:white_check_mark: check-list 
+:white_check_mark: check-list
 
 Ver videos | Codar | Documentar
 -----------|-------|-----------
