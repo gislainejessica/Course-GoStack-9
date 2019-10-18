@@ -7,7 +7,7 @@
 
 Atividades desenvolvidas durante curso da Rockeseat GoStack 9
 
- > Keep coding, stop to drink coffee :coffee:, the back to coding.  
+ > Keep coding, stop to drink coffee :coffee:, then, back to coding.  
 
 Mas se quiser decolar de vez, tem que seguir a lista de tarefas:
 
