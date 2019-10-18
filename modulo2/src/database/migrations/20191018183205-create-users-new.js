@@ -20,10 +20,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      tudo: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
       provider: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
