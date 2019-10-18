@@ -1,17 +1,18 @@
 import express from 'express'
 import routes from './routes'
 
-class App{
-  constructor(){
-    this.server =  express()
+class App {
+  constructor() {
+    this.server = express()
     this.midllewares()
     this.routes()
-
   }
-  midllewares(){
+
+  midllewares() {
     this.server.use(express.json())
   }
-  routes(){
+
+  routes() {
     this.server.use(routes)
   }
 }
