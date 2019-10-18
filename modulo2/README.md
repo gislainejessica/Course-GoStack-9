@@ -6,7 +6,7 @@
 - [X] ESLint, Prettier & EditorConfig
 - [x] Configurando Sequelize
 - [x] Migration de usuário
-- [ ] Model de usuário
+- [x] Model de usuário
 - [ ] Criando loader de models
 - [ ] Cadastro de usuários
 - [ ] Gerando hash da senha
