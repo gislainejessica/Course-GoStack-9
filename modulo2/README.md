@@ -31,7 +31,7 @@ Ver videos | Codar | Documentar
 
 [Sequelize](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/sequelize.md)
 
-[Código estilo e correção]('https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/config-code.md')
+[Código estilo e correção](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/config-code.md)
 
 ### Ferramentas
 - [PostBird](https://snapcraft.io/postbird)
