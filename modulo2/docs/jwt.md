@@ -41,8 +41,35 @@ Como processeder para gerar o TOKEN:
 ---
 
 ### Validação dos dados de entrada do usuário
-- Como criar um validador de entrada, para evitar que se passa dados invalidos ou incompletos?
+Como criar um validador de entrada, para evitar que se passa dados invalidos ou incompletos?
+  - Importar a biblioteca:
 
+    `yarn add yup`
+
+-  Validar criação e edição de usuários
+
+   Codigo de exemplo:
+
+    ```js
+    // Validação de entrada Update
+    const schema = Yup.object().shape({
+      name: Yup.string(),
+      email: Yup.string().email(),
+      oldPassword: Yup.string().min(6),
+      password: Yup.string()
+        .min(6)
+        .when('oldPassword', (oldPassword, field) =>
+          oldPassword ? field.required() : field
+        ),
+      confirmPassword: Yup.string().when('password', (password, field) =>
+        password ? field.required().oneOf([Yup.ref('password')]) : field
+      ),
+    })
+    // Verificar se passou na validação
+    if (!(await schema.isValid(req.body))) {
+      return res.status(400).json({ error: 'Falha na validação' })
+    }
+    ```
 
 
 
