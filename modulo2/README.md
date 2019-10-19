@@ -8,9 +8,9 @@
 - [x] Migration de usuário
 - [x] Model de usuário
 - [x] Criando loader de models
-- [ ] Cadastro de usuários
-- [ ] Gerando hash da senha
-- [ ] Conceitos de JWT
+- [x] Cadastro de usuários
+- [x] Gerando hash da senha
+- [x] Conceitos de JWT
 - [ ] Autenticação JWT
 - [ ] Middleware de autenticação
 - [ ] Update do usuário
@@ -35,9 +35,11 @@ Ver videos | Codar | Documentar
 
 [Migrations](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/migrations.md)
 
-
 [Criando modelos](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/config-connection.md)
 
+[Cadastro de usuarios](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/cadastro.md)
+
+[JWT](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/jwt.md)
 
 ### Ferramentas
 - [PostBird](https://snapcraft.io/postbird)
