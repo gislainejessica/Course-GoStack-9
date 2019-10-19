@@ -1,4 +1,4 @@
-# Conceitos Basicos de jwt
+# Conceitos Basicos de jwt e validações nas rotas
 - Sessões que retornan um TOKEN ( Headers, Payload, Assinatura ). __Assinatura__, é o modo de segurança do token, que vai garantir que o TOKEN não foi alterado no meio do caminho.
 
 - O Token contem informações imbutidas no codigo como: Qual o tipo de token, algoritmo e alguns dados do usuario da sessão.
@@ -32,6 +32,17 @@ Como processeder para gerar o TOKEN:
 
 - Nova rota de update do usuario na `routes.js` e criar o metodo update dentro do `UserController.js`
 
+---
+
 ### Edição dos dados do cadastro
+- A lógica para o usuário conseguir fazer alterações no cadastro está no mátodo _update_ do `UserVontroller.js`
+  - Agente basicamente verifica os dados passados, a validade dos mesmos e caso estaja tudo correto realizamos a alteração
+
+---
+
+### Validação dos dados de entrada do usuário
+- Como criar um validador de entrada, para evitar que se passa dados invalidos ou incompletos?
+
+
 
 

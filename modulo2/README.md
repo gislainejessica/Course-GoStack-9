@@ -13,7 +13,7 @@
 - [x] Conceitos de JWT
 - [x] Autenticação JWT
 - [x] Middleware de autenticação
-- [ ] Update do usuário
+- [x] Update do usuário
 - [ ] Validando dados de entrada
 
 :white_check_mark: check-list
@@ -39,7 +39,7 @@ Ver videos | Codar | Documentar
 
 [Cadastro de usuarios](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/cadastro.md)
 
-[JWT](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/jwt.md)
+[JWT e validações](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/jwt.md)
 
 ### Ferramentas
 - [PostBird](https://snapcraft.io/postbird)
