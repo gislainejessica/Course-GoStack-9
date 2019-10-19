@@ -14,13 +14,13 @@
 - [x] Autenticação JWT
 - [x] Middleware de autenticação
 - [x] Update do usuário
-- [ ] Validando dados de entrada
+- [x] Validando dados de entrada
 
 :white_check_mark: check-list
 
-Ver videos | Codar | Documentar
------------|-------|-----------
-:heavy_check_mark:| :clock10:|:clock10:
+Ver videos | Codar | Documentar| Revisar
+-----------|-------|-----------|---------
+:heavy_check_mark:| :clock10:|:clock10:|:clock10
 
 ## INTRO: Configurações e conceitos iniciais
 [Start do Projeto](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/iniciar.md)
