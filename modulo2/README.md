@@ -11,7 +11,7 @@
 - [x] Cadastro de usuários
 - [x] Gerando hash da senha
 - [x] Conceitos de JWT
-- [ ] Autenticação JWT
+- [x] Autenticação JWT
 - [ ] Middleware de autenticação
 - [ ] Update do usuário
 - [ ] Validando dados de entrada
