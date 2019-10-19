@@ -7,7 +7,7 @@
 - [x] Configurando Sequelize
 - [x] Migration de usuário
 - [x] Model de usuário
-- [ ] Criando loader de models
+- [x] Criando loader de models
 - [ ] Cadastro de usuários
 - [ ] Gerando hash da senha
 - [ ] Conceitos de JWT
@@ -34,6 +34,10 @@ Ver videos | Codar | Documentar
 [Código estilo e correção](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/config-code.md)
 
 [Migrations](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/migrations.md)
+
+
+[Criando modelos](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo2/docs/config-connection.md)
+
 
 ### Ferramentas
 - [PostBird](https://snapcraft.io/postbird)
