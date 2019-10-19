@@ -1,0 +1,2 @@
+- **Criar controler** para trabalhar com as requisições relacionadas com manipulação da tabela de usuários
+- **Criar rotas** da darão acesso as funcionalidades relacionadas aos usuários
