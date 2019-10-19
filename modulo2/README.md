@@ -12,7 +12,7 @@
 - [x] Gerando hash da senha
 - [x] Conceitos de JWT
 - [x] Autenticação JWT
-- [ ] Middleware de autenticação
+- [x] Middleware de autenticação
 - [ ] Update do usuário
 - [ ] Validando dados de entrada
 

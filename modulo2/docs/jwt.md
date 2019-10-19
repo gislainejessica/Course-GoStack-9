@@ -24,3 +24,14 @@ Como processeder para gerar o TOKEN:
 ---
 
 ### Bloquear usuario em rotas que ele não pode acessar se não tiver logado ou não tem autorização
+- Criar o __midlleware__ de autorização
+  - Verificar se token foi passado nos headers
+  - Decriptar o token passado
+  - Verificar credenciais do usuário
+  - Seguir rota para o `UserController.js` para tentar fazer a atualização que usuario requisita
+
+- Nova rota de update do usuario na `routes.js` e criar o metodo update dentro do `UserController.js`
+
+### Edição dos dados do cadastro
+
+
