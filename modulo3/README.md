@@ -1,10 +1,10 @@
 - [x] __Configurando__ Multer
 - [x] Avatar do usuário
 - [x] __Listando__ prestadores de serviço
-- [ ] Migration e Model de Agendamento
-- [ ] Agendamento de serviço
-- [ ] Validação de agendamento
-- [ ] __Listando__ agendamento do usuario
+- [x] Migration e Model de Agendamento
+- [x] Agendamento de serviço
+- [x] Validação de agendamento
+- [x] __Listando__ agendamento do usuario
 - [ ] Aplicando paginação
 - [ ] __Listando__ agenda do prestador
 - [ ] __Configurando__ MongoDB
@@ -31,6 +31,8 @@ Ver videos | Codar | Documentar| Revisar | Desafio
 
 ## Continuando o projeto de Back-End
 [Upload de Imagens](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo3/docs/imagem-upload.md)
+
+[Agendamento](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo3/docs/agendamento.md)
 
 
 ### Ferramentas

@@ -1,11 +1,13 @@
 // Carregar os models da aplicação e fazer a conexão com o banco de dados postgres criado ligado ao config database.js
 import Sequelize from 'sequelize'
+
 import User from '../app/models/User'
 import File from '../app/models/File'
+import Agendamento from '../app/models/Agendamento'
 
 import DataConfig from '../config/database'
 
-const models = [User, File]
+const models = [User, File, Agendamento]
 
 class Database {
   constructor() {

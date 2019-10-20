@@ -1,0 +1,61 @@
+## Trabalhando com agendamentos
+
+1) Criar uma migration pra criar a tabela de agendamento
+`yarn sequelize migration:create --name=create-agendamentos`
+
+2) Gerar tabela
+`yarn sequelize db:migrate`
+
+3) Criar um modelo para representar essa tabela na aplicação
+`Agendamento.js`
+
+4) Ir no `index.js` do database e adicionar o modelo de agendamento
+
+---
+
+## Controlar o agendamento
+- Criar um `AgendamentoController.js`
+- Criar uma rota para manipular os agendamentos
+
+  `routes.post('/agendamentos', AgendamentoController.store)`
+
+---
+
+## Validações dentro do agendamento
+- `yarn add date-fns@next`
+1) Validar data, sempre pegar datas futuras de acordo com o tempo atual
+
+  ```js
+    const horaStart = startOfHour(parseISO(data))
+      if (isBefore(horaStart, new Date())) {
+        return res.status(400).json({
+          error:
+            'Não dá pra fazer agendamento no passado, informe uma data futura',
+        })
+      }
+  ```
+
+2) Validar se data está disponivel para agendamento
+  ```js
+    const agendaCheck = await Agendamento.findOne({
+      where: {
+        provider_id,
+        canceled_at: null,
+        data: horaStart,
+      },
+    })
+
+    if (agendaCheck) {
+      return res
+        .status(400)
+        .json({ error: 'Horário não está disponível para agendamento' })
+    }
+  ```
+
+---
+
+## Listar agendamentos
+- Criar rota de listagem `routes.get('/agendamentos', AgendamentoController.index)`
+
+- Criar um metodo index no controle dos agendamentos
+
