@@ -55,7 +55,29 @@
 ---
 
 ## Listar agendamentos
-- Criar rota de listagem `routes.get('/agendamentos', AgendamentoController.index)`
+- Criar rota de listagem
+
+  `routes.get('/agendamentos', AgendamentoController.index)`
 
 - Criar um metodo index no controle dos agendamentos
+
+### Paginação
+Quanto de informação será levada por vez
+
+```js
+  const { page = 1 } = req.query
+  ...
+  limit: 20,
+  offset: (page - 1) * 20,
+  ...
+```
+### Lista Agenda de um determinado provedor
+Apesar de provedor ser tambem um usuario, vamos fazer uma listagem diferenciada para ele, então:
+- Criar um novo controller para ele.
+
+  `ScheduleController.js`
+
+- Criar a rota para acessar a essa agenda
+
+  `routes.get('/schedule', ScheduleController.index)`
 

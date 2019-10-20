@@ -7,10 +7,13 @@ import { startOfHour, parseISO, isBefore } from 'date-fns'
 
 class AgendamentoController {
   async index(req, res) {
+    const { page = 1 } = req.query
     const agendamentos = await Agendamento.findAll({
       where: { user_id: req.user_id, canceled_at: null },
-      order: ['data'],
-      attributes: ['id', 'data'],
+      order: ['date'],
+      attributes: ['id', 'date'],
+      limit: 20,
+      offset: (page - 1) * 20,
       include: [
         {
           model: User,
@@ -32,12 +35,12 @@ class AgendamentoController {
   async store(req, res) {
     const schema = Yup.object().shape({
       provider_id: Yup.number().required(),
-      data: Yup.date().required(),
+      date: Yup.date().required(),
     })
     if (!(await schema.isValid(req.body))) {
       return res.status(400).json({ error: 'Erro de validação' })
     }
-    const { provider_id, data } = req.body
+    const { provider_id, date } = req.body
     // Verificar se provider é valido
     const isProvider = await User.findOne({
       where: { id: provider_id, provider: true },
@@ -48,7 +51,7 @@ class AgendamentoController {
         .json({ error: 'Só pode agendar se passar um provider valido' })
     }
     // Antes de partir para criação do agendamente verificar se horario é valido
-    const horaStart = startOfHour(parseISO(data))
+    const horaStart = startOfHour(parseISO(date))
 
     if (isBefore(horaStart, new Date())) {
       return res.status(400).json({
@@ -61,7 +64,7 @@ class AgendamentoController {
       where: {
         provider_id,
         canceled_at: null,
-        data: horaStart,
+        date: horaStart,
       },
     })
 
@@ -74,7 +77,7 @@ class AgendamentoController {
     // Criar o agendamento
     const agendamento = await Agendamento.create({
       provider_id,
-      data: horaStart,
+      date: horaStart,
       user_id: req.user_id,
     })
 

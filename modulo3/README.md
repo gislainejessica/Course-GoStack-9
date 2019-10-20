@@ -5,8 +5,8 @@
 - [x] Agendamento de serviço
 - [x] Validação de agendamento
 - [x] __Listando__ agendamento do usuario
-- [ ] Aplicando paginação
-- [ ] __Listando__ agenda do prestador
+- [x] Aplicando paginação
+- [x] __Listando__ agenda do prestador
 - [ ] __Configurando__ MongoDB
 - [ ] Notificando novos agendamentos
 - [ ] __Listando__ notificações do usuario
