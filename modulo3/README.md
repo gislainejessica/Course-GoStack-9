@@ -1,6 +1,6 @@
 - [x] __Configurando__ Multer
 - [x] Avatar do usuário
-- [ ] __Listando__ prestadores de serviço
+- [x] __Listando__ prestadores de serviço
 - [ ] Migration e Model de Agendamento
 - [ ] Agendamento de serviço
 - [ ] Validação de agendamento
