@@ -1,33 +1,36 @@
-- [ ] Configurando multer
+- [x] __Configurando__ Multer
 - [ ] Avatar do usuário
-- [ ] Listagem de prestadores de serviço
+- [ ] __Listando__ prestadores de serviço
 - [ ] Migration e Model de Agendamento
 - [ ] Agendamento de serviço
 - [ ] Validação de agendamento
-- [ ] Listando agendamento do usuario
+- [ ] __Listando__ agendamento do usuario
 - [ ] Aplicando paginação
-- [ ] Listando agenda do prestador
-- [ ] Configurando o MongoDB
+- [ ] __Listando__ agenda do prestador
+- [ ] __Configurando__ MongoDB
 - [ ] Notificando novos agendamentos
-- [ ] Listando notificações do usuario
+- [ ] __Listando__ notificações do usuario
 - [ ] Marcar notificações como lidas
 - [ ] Cancelamento de agendamento
-- [ ] Configurando Nodemailer
-- [ ] Configurando templete de email
-- [ ] Configurando fila comRedis
+- [ ] __Configurando__ Nodemailer
+- [ ] __Configurando__ Templete de email
+- [ ] __Configurando__ fila com Redis
 - [ ] Monitorando falhas na fila
-- [ ] Listando horarios disponiveis
+- [ ] __Listando__ horarios disponiveis
 - [ ] Campos vituais no agendamento
 - [ ] Tratamento de exceções
 - [ ] Variaveis de ambiente
 
+---
+
 :white_check_mark: check-list
 
-Ver videos | Codar | Documentar| Revisar
------------|-------|-----------|---------
-:heavy_check_mark:| :clock10:|:clock10:|:clock10
+Ver videos | Codar | Documentar| Revisar | Desafio
+-----------|-------|-----------|---------|---------
+:heavy_check_mark:| :clock10:|:clock10:|:clock10|:clock10
 
 ## Continuando o projeto de Back-End
+[Upload de Imagens](/docs/imagem-upload.md)
 
 
 ### Ferramentas
