@@ -92,4 +92,14 @@ Algumas observações sobre essa configuração:
             })
           ...
         ```
+---
+### Providers
+1) Criar uma rota de provides no `routes.js`
+2) Criar um ProviderController para lidar com as requisições de providers, pois apesar de um provider ser um tipo de usuario, lá no UserController já temos um metodo index que lista os usuarios, então se precisamos de um outro index pra listar os que são provedores, temos que criar um novo controller.
+3) Criar um midlleware no app.js usando express.static pra referenciar os uploads
 
+- __Issues__ encontrados no caminho
+
+  - Na hora de acessar a rota dava erro, aconteceu porque eu tinha escrito a palavra _references_ errado na migration de criação de files, então ela não tava fazendo a referencia com a tabela de users, ou seja, eu tentava listar os provides e dava errado porque eu tava tentando acessar uma referencia que não existia no banco, porque foi criada a coluna sem a referencia de chave estrangeira.
+
+  - Erro na hora de voltar as informação de avatar pq o usuario que eu tava chamado tava sem avatar, então retornava null
