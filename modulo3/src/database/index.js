@@ -1,9 +1,11 @@
 // Carregar os models da aplicação e fazer a conexão com o banco de dados postgres criado ligado ao config database.js
 import Sequelize from 'sequelize'
 import User from '../app/models/User'
+import File from '../app/models/File'
+
 import DataConfig from '../config/database'
 
-const models = [User]
+const models = [User, File]
 
 class Database {
   constructor() {
@@ -12,10 +14,9 @@ class Database {
 
   init() {
     this.connection = new Sequelize(DataConfig)
-
-    models.map(model => {
-      model.init(this.connection)
-    })
+    models
+      .map(model => model.init(this.connection))
+      .map(model => model.associate && model.associate(this.connection.models))
   }
 }
 export default new Database()

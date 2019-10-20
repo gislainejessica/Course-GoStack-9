@@ -1,6 +1,8 @@
 import { Router } from 'express'
 import UserController from './app/controllers/UserController'
 import SessionController from './app/controllers/SessionController'
+import FileController from './app/controllers/FileController'
+
 import authMidlle from './app/middlewares/auth'
 
 import multer from 'multer'
@@ -15,8 +17,6 @@ routes.post('/sessions', SessionController.store)
 routes.use(authMidlle)
 routes.put('/users', UserController.update)
 
-routes.post('/files', upload.single('file'), (req, res) => {
-  return res.json({ ok: true })
-})
+routes.post('/files', upload.single('file'), FileController.store)
 
 export default routes

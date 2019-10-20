@@ -46,3 +46,50 @@ Algumas observações sobre essa configuração:
 ---
 
 ## Referenciar imagem na base de dados
+
+1) Vamos primeiro criar um controler pra lidar com as requisições da rota `/files` que criamos anteriormente, vamos dar o nome de `FileController.js`
+
+2) Vamos precisar mexer no banco de dados, pois no momento não temos onde armazer nas tabelas até o momento
+  - Criar então a migration que vai criar tabela para armazer esses arquivos
+
+    - `yarn sequelize migration:create --name=create-files`
+
+  - Criada a migrations, fazer as devidas modificaçoes e então gerar a tabela no banco:
+
+    - `yarn sequelize db:migrate`
+3) Vamos agora criar  um modelo para representar essa tabela na nossa aplicação
+  - Criar `file.js` nos Models
+
+4) Ir no `index.js` dentro da pasta _database_ e importar esse novo modelo
+
+5) Fazer a referencia de qual usuario pertence aquela imagem salva
+  - Opção 1: Desfazer a migration que criou tabela do __users__ e adicionar um coluna nova
+    - _Problema_: Como a tabela de __files__ é criada depois, na tabela de __users__ não pode haver referência à tabela de __files__, ou seja, nada feito por aqui.
+
+  - Opção 2: Criar uma nova migration, separada só pra criar essa nova coluna na tabela de __users__
+    - Como essa migration vai está depois das outras na linha do tempo, poderá ser criada, sem problemas,
+      uma nova coluna na tabela __users__ referenciando a tabela de __files__, pois essa migration tem acesso a essa informações de ambas as tabelas por ter sido criada depois.
+
+      - `yarn sequelize migration:create --name=add-avatar-fields-to-users`
+
+    - Depois, again:
+      - `yarn sequelize db:migrate`
+
+  * Alguns problemas na hora de salvar usando os modelos da aplicação.
+    - As referências entre os models users e files tem que existem também na aplicação,
+      já que foi criada nas migrations, para isso faremos o seguinte:
+
+      - 1) No modelo `User.js` faremos a seguinte alteração:
+        ```js
+          static associate(models) {
+          this.belongsTo(models.File, { foreignKey: 'avatar_id' })}
+        ```
+      - 2) Chamar esse metodo de associate no `index.js` do _database_
+        ```js
+          ...
+            models.map(model => {
+            model.associate && model.associate(this.connection.models)
+            })
+          ...
+        ```
+
