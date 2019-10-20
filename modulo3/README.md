@@ -7,7 +7,7 @@
 - [x] __Listando__ agendamento do usuario
 - [x] Aplicando paginação
 - [x] __Listando__ agenda do prestador
-- [ ] __Configurando__ MongoDB
+- [x] __Configurando__ MongoDB
 - [ ] Notificando novos agendamentos
 - [ ] __Listando__ notificações do usuario
 - [ ] Marcar notificações como lidas
