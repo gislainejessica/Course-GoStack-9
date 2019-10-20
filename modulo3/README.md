@@ -27,7 +27,7 @@
 
 Ver videos | Codar | Documentar| Revisar | Desafio
 -----------|-------|-----------|---------|---------
-:heavy_check_mark:| :clock10:|:clock10:|:clock10|:clock10
+:heavy_check_mark:| :clock10:|:clock10:|:clock10:|:clock10:
 
 ## Continuando o projeto de Back-End
 [Upload de Imagens](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo3/docs/imagem-upload.md)
