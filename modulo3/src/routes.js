@@ -5,6 +5,7 @@ import FileController from './app/controllers/FileController'
 import ProviderController from './app/controllers/ProviderController'
 import AgendamentoController from './app/controllers/AgendamentoController'
 import ScheduleController from './app/controllers/ScheduleController'
+import NotificationController from './app/controllers/NotificationController'
 
 import authMidlle from './app/middlewares/auth'
 
@@ -26,8 +27,12 @@ routes.post('/files', upload.single('file'), FileController.store)
 routes.get('/providers', ProviderController.index)
 
 routes.post('/agendamentos', AgendamentoController.store)
-
 routes.get('/agendamentos', AgendamentoController.index)
+routes.delete('/agendamentos/:id', AgendamentoController.delete)
+
 routes.get('/schedule', ScheduleController.index)
+
+routes.get('/notifications', NotificationController.index)
+routes.put('/notifications/:id', NotificationController.update)
 
 export default routes

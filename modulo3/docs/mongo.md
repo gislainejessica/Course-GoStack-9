@@ -28,3 +28,14 @@ Já tá conectado no banco
     - Criado o schema é só importar e usar nos controles e onde for necessário,
   não precisa inicalizar database como no sequelize
 3) Ir na controller de agendamento no metodo store para criar a notificação
+
+### Listar notificações
+1) Criar rota de notificaçoes
+2) Criar Controle para Notificação `NotificationController.js`
+
+---
+
+### Marcar notificações como lidas
+1) Criar rotas para marcar como lida
+
+  `routes.get('/notifications/:id', NotificationController.update)`

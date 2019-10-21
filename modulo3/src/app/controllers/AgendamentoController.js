@@ -4,8 +4,9 @@ import File from '../models/File'
 import Notification from '../schemas/Notifications'
 
 import * as Yup from 'yup'
-import { startOfHour, parseISO, isBefore, format } from 'date-fns'
+import { startOfHour, parseISO, isBefore, format, subHours } from 'date-fns'
 import pt from 'date-fns/locale/pt'
+import Mail from '../../lib/Mail'
 
 class AgendamentoController {
   async index(req, res) {
@@ -91,6 +92,46 @@ class AgendamentoController {
     await Notification.create({
       content: `Novo agendamento de ${user.name} para o ${formatedDate}`,
       user: provider_id,
+    })
+
+    return res.json(agendamento)
+  }
+
+  async delete(req, res) {
+    // Nos parametros recebe o id do agendamento
+    const agendamento = await Agendamento.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          as: 'provider',
+          attributes: ['name', 'email'],
+        },
+      ],
+    })
+
+    // Verificar se usuario é o 'dono' do agendamento
+    if (req.user_id !== agendamento.user_id) {
+      console.log(agendamento.user_id, '_', req.params.id)
+      return res.status(401).json({
+        error: 'Você não tem permissão para cancelar esse agendamento',
+      })
+    }
+    const datediffHours = subHours(agendamento.date, 2)
+
+    if (isBefore(datediffHours, new Date())) {
+      return res.status(401).json({
+        error:
+          'Cancelamento só pode ser feito com duas horas de antencedência minima',
+      })
+    }
+    agendamento.canceled_at = new Date()
+
+    await agendamento.save()
+    // Mandando por email uma mensagem sobre o cancelamento
+    await Mail.sendMail({
+      to: `${agendamento.provider.name}<${agendamento.provider.email}>`,
+      subjet: 'Cancelamento de Agendamento',
+      text: 'Você tem um novo cancelamento',
     })
 
     return res.json(agendamento)

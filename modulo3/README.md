@@ -9,10 +9,10 @@
 - [x] __Listando__ agenda do prestador
 - [x] __Configurando__ MongoDB
 - [x] Notificando novos agendamentos
-- [ ] __Listando__ notificações do usuario
-- [ ] Marcar notificações como lidas
-- [ ] Cancelamento de agendamento
-- [ ] __Configurando__ Nodemailer
+- [x] __Listando__ notificações do usuario
+- [x] Marcar notificações como lidas
+- [x] Cancelamento de agendamento
+- [x] __Configurando__ Nodemailer
 - [ ] __Configurando__ Templete de email
 - [ ] __Configurando__ fila com Redis
 - [ ] Monitorando falhas na fila
@@ -36,8 +36,11 @@ Ver videos | Codar | Documentar| Revisar | Desafio
 
 [MongoDB e Notificações](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo3/docs/mongo.md)
 
+[Email e Notificações](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo3/docs/email.md)
+
 
 ### Ferramentas
 
+[Provedor de Email - Dev](https://mailtrap.io)
 
 

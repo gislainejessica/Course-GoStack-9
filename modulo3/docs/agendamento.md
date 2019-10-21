@@ -81,3 +81,8 @@ Apesar de provedor ser tambem um usuario, vamos fazer uma listagem diferenciada 
 
   `routes.get('/schedule', ScheduleController.index)`
 
+### Cancelar agendamento
+- Regra: só pode ser cancelado um agendamento há mais de duas horas para acontecer
+1) Rota para deletar o agendamento
+  `routes.delete('/agendamentos/:id', AgendamentoController.delete)`
+2) Criar no controller de agendamento um metodo de delete
