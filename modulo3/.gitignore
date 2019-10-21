@@ -2,3 +2,4 @@ node_modules
 .vscode
 .env
 info.txt
+exemplo.env
