@@ -17,4 +17,14 @@
 Já tá conectado no banco
 
 ---
+### Modelos do mongo na aplicação
 
+- Usar o mongo para __Notificação de Agendamentos__
+
+  *Schema free é a filosofia do mongodb*
+
+1) Criar dentro da pasta *app* uma pasta para armazenar os *schemas*
+2) Criar o aquivo `Notifications.js`
+    - Criado o schema é só importar e usar nos controles e onde for necessário,
+  não precisa inicalizar database como no sequelize
+3) Ir na controller de agendamento no metodo store para criar a notificação

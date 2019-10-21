@@ -34,6 +34,8 @@ Ver videos | Codar | Documentar| Revisar | Desafio
 
 [Agendamento](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo3/docs/agendamento.md)
 
+[MongoDB e Notificações](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo3/docs/mongo.md)
+
 
 ### Ferramentas
 
