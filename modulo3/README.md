@@ -13,7 +13,7 @@
 - [x] Marcar notificações como lidas
 - [x] Cancelamento de agendamento
 - [x] __Configurando__ Nodemailer
-- [ ] __Configurando__ Templete de email
+- [x] __Configurando__ Templete de email
 - [ ] __Configurando__ fila com Redis
 - [ ] Monitorando falhas na fila
 - [ ] __Listando__ horarios disponiveis
@@ -38,6 +38,7 @@ Ver videos | Codar | Documentar| Revisar | Desafio
 
 [Email e Notificações](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo3/docs/email.md)
 
+[Banco Redis](https://github.com/gislainejessica/Course-GoStack-9/tree/master/modulo3/docs/redis.md)
 
 ### Ferramentas
 
