@@ -3,8 +3,8 @@ export default {
   port: 2525,
   secure: false,
   auth: {
-    user: 'dc8b389f72bb70',
-    pass: 'b8ab15d9fbafcd',
+    user: 'USER',
+    pass: 'PASS',
   },
   default: {
     from: 'Equipe eu mesma aqui testando <noreply@testando.com>',
