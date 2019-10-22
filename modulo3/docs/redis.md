@@ -31,3 +31,9 @@ Quando eu tava criando o docker com a imagem do redis coloquei a porta errada
 sudo docker run --name redisgobarber -p 6379:6369 -d -t redis:alpine
 mas devia ter feito
 sudo docker run --name redisgobarber -p 6379:6379 -d -t redis:alpine
+
+---
+
+#### Captando erros nas filas
+-> Vamos fazer uma configuração no arquivo `Queue.js` da pasta _lib_ para que os falhas que ocorram na fila sejam monitorados.
+  - `bee.process(handle)` alterar para `bee.process(handle)`
