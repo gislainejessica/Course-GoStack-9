@@ -1,5 +1,5 @@
 import pt from 'date-fns/locale/pt'
-import { format } from 'date-fns'
+import { format, parseISO } from 'date-fns'
 import Mail from '../../lib/Mail'
 
 class CancellationMail {
@@ -18,9 +18,13 @@ class CancellationMail {
       context: {
         provider: agendamento.provider.name,
         user: agendamento.user.name,
-        date: format(agendamento.date, "'dia' dd 'de' MMMM', ás' H:mm'h", {
-          locale: pt,
-        }),
+        date: format(
+          parseISO(agendamento.date),
+          "'dia' dd 'de' MMMM', ás' H:mm'h",
+          {
+            locale: pt,
+          }
+        ),
       },
     })
   }

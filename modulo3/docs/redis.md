@@ -25,3 +25,9 @@ Aí é que entra o [Redis](https://redis.io), um banco de dados não relacional,
   - Para chamar o processo da fila pra rodar separado do programa principal, pra ficar rodando em paralelo
   `node src/queue.js`, a principio vai dar erro, porque não tem o sucrase
   - Criar um script para rodar esse proceso `nodemon src/queue.js`
+
+__Issuies__
+Quando eu tava criando o docker com a imagem do redis coloquei a porta errada
+sudo docker run --name redisgobarber -p 6379:6369 -d -t redis:alpine
+mas devia ter feito
+sudo docker run --name redisgobarber -p 6379:6379 -d -t redis:alpine
