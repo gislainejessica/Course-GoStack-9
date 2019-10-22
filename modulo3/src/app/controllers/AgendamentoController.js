@@ -6,7 +6,8 @@ import Notification from '../schemas/Notifications'
 import * as Yup from 'yup'
 import { startOfHour, parseISO, isBefore, format, subHours } from 'date-fns'
 import pt from 'date-fns/locale/pt'
-import Mail from '../../lib/Mail'
+import Queue from '../../lib/Queue'
+import Cancellation from '../jobs/CancellationMail'
 
 class AgendamentoController {
   async index(req, res) {
@@ -132,19 +133,8 @@ class AgendamentoController {
     agendamento.canceled_at = new Date()
 
     await agendamento.save()
-    // Mandando por email uma mensagem sobre o cancelamento
-    await Mail.sendMail({
-      to: `${agendamento.provider.name}<${agendamento.provider.email}>`,
-      subjet: 'Cancelamento de Agendamento',
-      template: 'cancellation',
-      context: {
-        provider: agendamento.provider.name,
-        user: agendamento.user.name,
-        date: format(agendamento.date, "'dia' dd 'de' MMMM', ás' H:mm'h", {
-          locale: pt,
-        }),
-      },
-    })
+    // Redirecionado para os jobs
+    await Queue.add(Cancellation.key, { agendamento })
 
     return res.json(agendamento)
   }
