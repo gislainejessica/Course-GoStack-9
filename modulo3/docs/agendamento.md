@@ -61,6 +61,8 @@
 
 - Criar um metodo index no controle dos agendamentos
 
+---
+
 ### Paginação
 Quanto de informação será levada por vez
 
@@ -71,6 +73,9 @@ Quanto de informação será levada por vez
   offset: (page - 1) * 20,
   ...
 ```
+
+---
+
 ### Lista Agenda de um determinado provedor
 Apesar de provedor ser tambem um usuario, vamos fazer uma listagem diferenciada para ele, então:
 - Criar um novo controller para ele.
@@ -81,8 +86,22 @@ Apesar de provedor ser tambem um usuario, vamos fazer uma listagem diferenciada 
 
   `routes.get('/schedule', ScheduleController.index)`
 
+---
+
 ### Cancelar agendamento
 - Regra: só pode ser cancelado um agendamento há mais de duas horas para acontecer
 1) Rota para deletar o agendamento
   `routes.delete('/agendamentos/:id', AgendamentoController.delete)`
 2) Criar no controller de agendamento um metodo de delete
+
+---
+
+### Listando para o provedor os horários disponíveis
+1) Criar uma rota para fazer as listagens
+  - `routes.get('/providers/:providerId/available', AvailableController.index)`
+2) Criar um `AvailableController.js` paralidar com essa nova rota e verificar quais horarios estão disponíveis
+
+---
+
+
+

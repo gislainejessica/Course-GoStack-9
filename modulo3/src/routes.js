@@ -6,6 +6,7 @@ import ProviderController from './app/controllers/ProviderController'
 import AgendamentoController from './app/controllers/AgendamentoController'
 import ScheduleController from './app/controllers/ScheduleController'
 import NotificationController from './app/controllers/NotificationController'
+import AvailableController from './app/controllers/AvailableController'
 
 import authMidlle from './app/middlewares/auth'
 
@@ -25,6 +26,7 @@ routes.put('/users', UserController.update)
 routes.post('/files', upload.single('file'), FileController.store)
 
 routes.get('/providers', ProviderController.index)
+routes.get('/providers/:providerId/available', AvailableController.index)
 
 routes.post('/agendamentos', AgendamentoController.store)
 routes.get('/agendamentos', AgendamentoController.index)
