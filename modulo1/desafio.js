@@ -3,9 +3,9 @@ const server = express()
 
 server.use(express.json())
 
-const users = ['Gislaine','Jéssica','Nina','Pietro']
+const users = ['Gislaine', 'Jéssica', 'Nina', 'Pietro']
 
-// Middlewares globais internas 
+// Middlewares globais internas
 server.use((req, res, next) => {
   console.time('requisicao')
   console.log(`método: ${req.method}; url:${req.url}`)
@@ -13,20 +13,20 @@ server.use((req, res, next) => {
   console.timeEnd('requisicao')
 })
 // Middleware em forma de função
-function checkUserExists(req, res, next){
-  if (!req.body.name){
-    return res.status(400).json({error: "Nome de usuario obrigatorio"})
+function checkUserExists(req, res, next) {
+  if (!req.body.name) {
+    return res.status(400).json({ error: 'Nome de usuario obrigatorio' })
   }
   return next()
 }
 
-function checkUserInArray(req, res, next){
-  if (!users[req.params.index]){
-    return res.status(400).json({error: "Usuario não existe"})
+function checkUserInArray(req, res, next) {
+  if (!users[req.params.index]) {
+    return res.status(400).json({ error: 'Usuario não existe' })
   }
   return next()
 }
-// Rotas que iam ser expostas 
+// Rotas que iam ser expostas
 server.get('/users', (req, res) => {
   return res.json(users)
 })
@@ -51,7 +51,7 @@ server.put('/users/:index', checkUserInArray, checkUserExists, (req, res) => {
 
 server.delete('/users/:index', checkUserInArray, (req, res) => {
   const { index } = req.params.index
-  users.splice(index,   1)
+  users.splice(index, 1)
   res.send()
 })
 
