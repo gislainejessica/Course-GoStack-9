@@ -1,5 +1,6 @@
 import 'dotenv/config'
 import express from 'express'
+import cors from 'cors'
 import 'express-async-errors'
 import routes from './routes'
 import path from 'path'
@@ -21,7 +22,7 @@ class App {
 
   midllewares() {
     this.server.use(Sentry.Handlers.requestHandler())
-
+    this.server.use(cors())
     this.server.use(express.json())
     this.server.use(
       '/files',
