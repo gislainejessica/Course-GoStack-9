@@ -12,7 +12,7 @@ Atividades desenvolvidas durante curso da Rockeseat GoStack 9
 Mas se quiser decolar de vez, tem que seguir a lista de tarefas:
 
 - [x] :one: Modulo 1
-- [ ] :v: Tarefa modulo 1
+- [x] :v: Tarefa modulo 1
 - [x] :two: Modulo 2
 - [ ] :ok_hand: Tarefa modulo 2 
 - [x] :three: Modulo 3
